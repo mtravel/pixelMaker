@@ -1,4 +1,3 @@
-//size
 $('#sizePicker').submit(function (event) {
   event.preventDefault();
   const height = document.getElementById('inputHeight').value;
@@ -24,5 +23,8 @@ function makeGrid(x,y) {
       } else {
            $(this).attr('style', 'background-color:' + color);
       }
+      colorPicker.addEventListener('input', function() {
+      selectedColor = colorPicker.value;
+  }, false);
     })
 }
